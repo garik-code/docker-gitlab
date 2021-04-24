@@ -6,6 +6,21 @@
 ##! https://gitlab.com/gitlab-org/omnibus-gitlab/raw/master/files/gitlab-config-template/gitlab.rb.template
 
 
+
+gitlab_rails['smtp_enable'] = true
+gitlab_rails['smtp_address'] = "smtp.yandex.ru"
+gitlab_rails['smtp_port'] = 465
+gitlab_rails['smtp_user_name'] = "mail@garik.site"
+gitlab_rails['smtp_password'] = ""
+gitlab_rails['smtp_domain'] = "yourdomain_or_yandex.ru"
+gitlab_rails['gitlab_email_from'] = 'mail@garik.site'
+gitlab_rails['smtp_authentication'] = "mail@garik.site"
+gitlab_rails['smtp_tls'] = true
+gitlab_rails['smtp_enable_starttls_auto'] = true
+gitlab_rails['smtp_openssl_verify_mode'] = 'peer'
+
+
+
 ## GitLab URL
 ##! URL on which GitLab will be reachable.
 ##! For more details on configuring external_url see:
